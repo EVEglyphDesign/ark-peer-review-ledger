@@ -199,54 +199,50 @@
 
   <div class="container portal-section" id="come-in">
     <h2>Come in</h2>
-    <p class="lead">If a moment in the ledger landed for you and you want a follow-up, leave your name and how to reach you. This surface does not accept anonymous submissions.</p>
-    <p>No back channels. No scraped contacts. Nothing gets published about you. Your details are received privately, reviewed manually, and only used to decide whether a follow-up is a fit. If it isn't, you hear nothing further — no list, no drip, no sale.</p>
+    <p class="lead">If a moment in the ledger landed for you and you want a follow-up, leave your name and email. We send you a one-time code, you type it back, and you're in the review queue. Nothing more.</p>
+    <p>No back channels. No public echo. Manual review only.</p>
 
     <div class="intake-cta">
-      <button type="button" class="btn-primary intake-open" id="intake-open">Come in — leave your name so we can follow up</button>
+      <button type="button" class="btn-primary intake-open" id="intake-open">Come in</button>
     </div>
 
     <div class="intake-panel" id="intake-panel" hidden aria-live="polite">
-      <form class="signal-form" id="intake-form" novalidate>
-        <p class="intake-lead">Identified intake. All fields required.</p>
+      <form class="signal-form" id="request-form" novalidate>
+        <p class="intake-lead">Step 1 of 2 — name and email.</p>
 
         <label>
-          <span>Full legal name</span>
-          <input type="text" name="name" autocomplete="name" required minlength="2" placeholder="First and last, as it appears on your ID">
+          <span>Name</span>
+          <input type="text" name="name" autocomplete="name" required minlength="2" placeholder="Your name">
         </label>
 
         <label>
-          <span>Phone (include country code)</span>
-          <input type="tel" name="phone" autocomplete="tel" required pattern="^\+?[0-9\s\-\(\)]{7,20}$" placeholder="e.g. +1 306 555 0134">
-        </label>
-
-        <label>
-          <span>Country</span>
-          <input type="text" name="country" autocomplete="country-name" required minlength="2" placeholder="Country of residence">
-        </label>
-
-        <label>
-          <span>LinkedIn URL</span>
-          <input type="url" name="linkedin" required placeholder="https://www.linkedin.com/in/…" pattern="^https?://([a-z]{2,3}\.)?linkedin\.com/.+">
-          <span class="field-hint">LinkedIn is how the intake is classified. Personal profile URL, not a company page.</span>
-        </label>
-
-        <label>
-          <span>One line — why you're coming in</span>
-          <textarea name="reason" rows="3" required minlength="10" placeholder="Which moment in the ledger landed, and what would a follow-up be about?"></textarea>
-        </label>
-
-        <label class="signal-pledge">
-          <input type="checkbox" name="pledge" id="pledge" required>
-          <span>I confirm the information above is accurate and belongs to me. I understand this is not a subscription — I will only hear back if a follow-up is a fit.</span>
+          <span>Email</span>
+          <input type="email" name="email" autocomplete="email" required placeholder="you@example.com">
         </label>
 
         <div class="signal-actions">
-          <button type="submit" class="btn-primary" id="intake-submit">Send</button>
+          <button type="submit" class="btn-primary" id="request-submit">Send me a code</button>
           <button type="button" class="btn-secondary" id="intake-cancel">Cancel</button>
         </div>
 
-        <p class="signal-note intake-status" id="intake-status" hidden></p>
+        <p class="signal-note intake-status" id="request-status" hidden></p>
+      </form>
+
+      <form class="signal-form" id="verify-form" novalidate hidden>
+        <p class="intake-lead">Step 2 of 2 — check your inbox and paste the 6-digit code.</p>
+
+        <label>
+          <span>Code</span>
+          <input type="text" name="code" inputmode="numeric" autocomplete="one-time-code" required pattern="^[0-9]{6}$" maxlength="6" placeholder="000000">
+          <span class="field-hint">The code expires in 15 minutes. If it doesn't arrive, check spam.</span>
+        </label>
+
+        <div class="signal-actions">
+          <button type="submit" class="btn-primary" id="verify-submit">Verify and come in</button>
+          <button type="button" class="btn-secondary" id="verify-back">Use a different email</button>
+        </div>
+
+        <p class="signal-note intake-status" id="verify-status" hidden></p>
       </form>
     </div>
   </div>
@@ -306,93 +302,129 @@
 
 <script>
 (function () {
-  // Relay endpoint — set to a real URL once the Vercel/Actions relay is deployed.
-  // Until then, submissions do NOT go anywhere. The page tells the truth about that.
-  var RELAY_URL = ""; // e.g. "https://ark-peer-review-intake.vercel.app/api/intake"
+  // Relay endpoint — set once the Cloudflare Worker is deployed.
+  // While empty, the page tells the truth: nothing is transmitted.
+  var RELAY_URL = ""; // e.g. "https://ark-peer-review-intake.<subdomain>.workers.dev"
 
   var openBtn = document.getElementById("intake-open");
   var panel = document.getElementById("intake-panel");
-  var form = document.getElementById("intake-form");
-  var status = document.getElementById("intake-status");
+  var reqForm = document.getElementById("request-form");
+  var verForm = document.getElementById("verify-form");
+  var reqStatus = document.getElementById("request-status");
+  var verStatus = document.getElementById("verify-status");
   var cancel = document.getElementById("intake-cancel");
-  var submit = document.getElementById("intake-submit");
+  var back = document.getElementById("verify-back");
+  var reqSubmit = document.getElementById("request-submit");
+  var verSubmit = document.getElementById("verify-submit");
+
+  var pending = { name: "", email: "", ticket: "" };
 
   openBtn.addEventListener("click", function () {
     panel.hidden = false;
     openBtn.style.display = "none";
     panel.scrollIntoView({ behavior: "smooth", block: "start" });
-    var first = form.querySelector("input[name=name]");
+    var first = reqForm.querySelector("input[name=name]");
     if (first) setTimeout(function () { first.focus(); }, 250);
   });
 
-  cancel.addEventListener("click", function () {
+  function reset() {
     panel.hidden = true;
     openBtn.style.display = "";
-    status.hidden = true;
-    form.reset();
-  });
-
-  function showStatus(text, kind) {
-    status.textContent = text;
-    status.hidden = false;
-    status.classList.remove("status-ok", "status-hold", "status-err");
-    if (kind) status.classList.add(kind);
+    reqForm.hidden = false;
+    verForm.hidden = true;
+    reqStatus.hidden = true;
+    verStatus.hidden = true;
+    reqForm.reset();
+    verForm.reset();
+    pending = { name: "", email: "", ticket: "" };
   }
 
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    if (!form.checkValidity()) {
-      form.reportValidity();
-      return;
-    }
+  cancel.addEventListener("click", reset);
 
-    var payload = {
-      name: form.name.value.trim(),
-      phone: form.phone.value.trim(),
-      country: form.country.value.trim(),
-      linkedin: form.linkedin.value.trim(),
-      reason: form.reason.value.trim(),
-      pledged: form.pledge.checked,
-      submitted_at: new Date().toISOString(),
-      source: "ark-peer-review-ledger · Shawn Ryan #320"
-    };
+  back.addEventListener("click", function () {
+    verForm.hidden = true;
+    reqForm.hidden = false;
+    verStatus.hidden = true;
+    reqStatus.hidden = true;
+    pending.ticket = "";
+    var first = reqForm.querySelector("input[name=email]");
+    if (first) first.focus();
+  });
+
+  function show(el, text, kind) {
+    el.textContent = text;
+    el.hidden = false;
+    el.classList.remove("status-ok", "status-hold", "status-err");
+    if (kind) el.classList.add(kind);
+  }
+
+  reqForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (!reqForm.checkValidity()) { reqForm.reportValidity(); return; }
+
+    pending.name = reqForm.name.value.trim();
+    pending.email = reqForm.email.value.trim();
 
     if (!RELAY_URL) {
-      // Honest failure: no fake success. Nothing was transmitted.
-      showStatus(
-        "The intake relay is not live yet. Your details were NOT sent anywhere and are NOT stored — they only exist in this browser tab. " +
-        "Please come back shortly, or reach out through a standard, published channel.",
+      show(reqStatus,
+        "The intake relay is not live yet. Your details were NOT sent anywhere. " +
+        "Please come back shortly.",
         "status-hold"
       );
-      submit.disabled = false;
       return;
     }
 
-    submit.disabled = true;
-    showStatus("Sending…", "status-hold");
+    reqSubmit.disabled = true;
+    show(reqStatus, "Sending code…", "status-hold");
 
-    fetch(RELAY_URL, {
+    fetch(RELAY_URL + "/request-code", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload)
+      body: JSON.stringify({ name: pending.name, email: pending.email })
     }).then(function (r) {
-      if (!r.ok) throw new Error("HTTP " + r.status);
-      return r.json().catch(function () { return {}; });
-    }).then(function () {
-      form.reset();
-      showStatus(
-        "Received. Your details went to a private review queue. " +
-        "You will hear back only if a follow-up is a fit. Thank you for coming in identified.",
+      return r.json().catch(function () { return {}; }).then(function (b) { return { ok: r.ok, body: b }; });
+    }).then(function (res) {
+      reqSubmit.disabled = false;
+      if (!res.ok) throw new Error(res.body && res.body.error ? res.body.error : "send failed");
+      pending.ticket = res.body.ticket || "";
+      reqStatus.hidden = true;
+      reqForm.hidden = true;
+      verForm.hidden = false;
+      show(verStatus, "Code sent to " + pending.email + ". Check your inbox.", "status-ok");
+      var codeInput = verForm.querySelector("input[name=code]");
+      if (codeInput) setTimeout(function () { codeInput.focus(); }, 150);
+    }).catch(function (err) {
+      reqSubmit.disabled = false;
+      show(reqStatus, "Could not send the code (" + err.message + "). Nothing was stored.", "status-err");
+    });
+  });
+
+  verForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (!verForm.checkValidity()) { verForm.reportValidity(); return; }
+
+    var code = verForm.code.value.trim();
+    verSubmit.disabled = true;
+    show(verStatus, "Verifying…", "status-hold");
+
+    fetch(RELAY_URL + "/verify-code", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ ticket: pending.ticket, code: code })
+    }).then(function (r) {
+      return r.json().catch(function () { return {}; }).then(function (b) { return { ok: r.ok, body: b }; });
+    }).then(function (res) {
+      verSubmit.disabled = false;
+      if (!res.ok) throw new Error(res.body && res.body.error ? res.body.error : "verification failed");
+      verForm.hidden = true;
+      show(verStatus,
+        "You're in. " + pending.name + ", your name and email are in the private review queue. " +
+        "You will hear back only if a follow-up is a fit.",
         "status-ok"
       );
-      submit.disabled = false;
     }).catch(function (err) {
-      showStatus(
-        "The relay did not accept the submission (" + err.message + "). Nothing was stored on this page. " +
-        "Please try again shortly, or reach out through a standard, published channel.",
-        "status-err"
-      );
-      submit.disabled = false;
+      verSubmit.disabled = false;
+      show(verStatus, "That code did not verify (" + err.message + "). Try again, or use a different email.", "status-err");
     });
   });
 })();
