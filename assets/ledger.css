@@ -160,6 +160,36 @@
   .col-score::before { content: "Resonance — "; font-weight: 600; color: var(--marine-deep); font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; }
 }
 
+/* Umbrella-copyright notice */
+.umbrella-notice {
+  margin-top: 1.25rem;
+  padding: 1.1rem 1.3rem 1rem;
+  background: #fbf7ee;
+  border: 1px solid #d9c99d;
+  border-left: 4px solid #b08a3e;
+  border-radius: 4px;
+}
+.umbrella-notice-badge {
+  display: inline-block;
+  padding: 0.3rem 0.75rem;
+  margin-bottom: 0.7rem;
+  background: #4a3820;
+  color: #fbf7ee;
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 2px;
+}
+.umbrella-notice p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #3a2a10;
+  line-height: 1.55;
+}
+.umbrella-notice strong { color: #3a2a10; }
+
 /* Intake CTA + panel */
 .intake-cta {
   margin: 1.25rem 0 0.5rem;
