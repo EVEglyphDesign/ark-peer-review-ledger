@@ -160,6 +160,48 @@
   .col-score::before { content: "Resonance — "; font-weight: 600; color: var(--marine-deep); font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; }
 }
 
+/* Intake CTA + panel */
+.intake-cta {
+  margin: 1.25rem 0 0.5rem;
+}
+.intake-open {
+  display: inline-block;
+  padding: 0.85rem 1.5rem;
+  background: var(--marine-deep);
+  color: var(--white);
+  border: 1px solid var(--marine-deep);
+  border-radius: 3px;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.12s, border-color 0.12s;
+}
+.intake-open:hover { background: var(--marine); border-color: var(--marine); }
+
+.intake-panel {
+  margin-top: 1.25rem;
+}
+.intake-lead {
+  margin: 0 0 1rem;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.1rem;
+  color: var(--marine-deep);
+}
+.field-hint {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  font-style: italic;
+  text-transform: none;
+  letter-spacing: 0;
+}
+.intake-status.status-ok { border-left-color: #4a7a3d; }
+.intake-status.status-hold { border-left-color: var(--stella-gold); }
+.intake-status.status-err { border-left-color: #b13a3a; }
+
 /* Signal form */
 .signal-form {
   margin-top: 1.4rem;
