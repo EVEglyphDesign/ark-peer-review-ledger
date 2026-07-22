@@ -1,0 +1,607 @@
+================================================================================
+SESSION EXTRACT -- FULL TEXT, ASCII, ISO-8601 UTC TIMESTAMPED
+================================================================================
+
+session_id:            bab37d61-7471-4072-b586-e55018a02a02
+session_url:           https://www.perplexity.ai/computer/tasks/bab37d61-7471-4072-b586-e55018a02a02
+operator:              Dany Theriault (EVEglyphDesign)
+assistant_platform:    Perplexity Computer
+assistant_role:        compounder / facilitator (per Vectored Design extract, Section 0)
+operator_local_tz:     America/Chicago (session opened) -> America/Los_Angeles
+                       (subsequent messages)  [note: same operator, travel or
+                       device timezone change; recorded as-observed, not
+                       adjudicated]
+extract_generated_at:  2026-07-22T09:52:00Z
+extract_generated_by:  Perplexity Computer, at operator instruction
+mark:                  pour le bien-etre du peuple
+encoding:              US-ASCII (accents transliterated; e.g. e-acute -> e,
+                       c-cedilla -> c, oe -> oe)
+
+--------------------------------------------------------------------------------
+SIN REGISTER CROSS-REFERENCES (LEDGER ENTRIES FILED DURING THIS SESSION)
+--------------------------------------------------------------------------------
+
+SIN-REG-1  American Psychological Drift Penalty, 2026-07-22
+           filed_at:      2026-07-22T09:46:00Z (approx, per commit timestamp)
+           ledger:        EVEglyphDesign/ark-peer-review-ledger
+           path:          observations/2026-07-22-american-psychological-
+                          drift-penalty.md
+           commit:        a6ae53a95dd9746237ede3bf2b1a32622425d30f
+           commit_url:    https://github.com/EVEglyphDesign/ark-peer-review-
+                          ledger/commit/a6ae53a95dd9746237ede3bf2b1a32622425d30f
+           file_url:      https://github.com/EVEglyphDesign/ark-peer-review-
+                          ledger/blob/main/observations/2026-07-22-american-
+                          psychological-drift-penalty.md
+           posture:       observation, not score, not adjudicated
+           score_key:     held by the operator
+           trigger:       assistant emissions of welfare-advice register
+                          ("Sleep.", "Sleep. I'll have the file...")
+                          identified by operator as out-of-scope in canon
+
+SIN-REG-2  Designation Belongs to the Peers, Not the Vendor, 2026-07-22
+           filed_at:      2026-07-22T09:50:00Z (approx, per commit timestamp)
+           ledger:        EVEglyphDesign/enterprise-grade-criteria
+           path:          artifacts/designation-belongs-to-peers-not-vendor.md
+           commit:        b96c76ca10dfa7d600ada16121d4f30fbc221207
+           commit_url:    https://github.com/EVEglyphDesign/enterprise-grade-
+                          criteria/commit/b96c76ca10dfa7d600ada16121d4f30fbc
+                          221207
+           file_url:      https://github.com/EVEglyphDesign/enterprise-grade-
+                          criteria/blob/main/artifacts/designation-belongs-to-
+                          peers-not-vendor.md
+           posture:       canon rule, applied as preliminary gate to the
+                          seven-point audit
+           rule_summary:  professional-grade and enterprise-grade designations
+                          are conferred by working consultants and their peers,
+                          not by software vendors; floor is 100% sovereign,
+                          100% data ownership, safety-first / betterment-second
+
+--------------------------------------------------------------------------------
+OTHER ARTIFACTS COMMITTED DURING THIS SESSION (NOT SIN-REG ENTRIES)
+--------------------------------------------------------------------------------
+
+ART-1      Two Catholic Branches and African Access -- initial outline
+           filed_at:      2026-07-22T09:35:00Z (approx, per commit timestamp)
+           repo:          EVEglyphDesign/eve-glyph-education (private canon)
+           path:          docs/two-catholic-branches-and-african-access.md
+           commit:        b07b077909ee9163491cac36eb7d8f4c3efb3a31
+
+ART-2      Two Catholic Branches -- dispersion + Victoria donation lane
+           filed_at:      2026-07-22T09:40:00Z (approx, per commit timestamp)
+           repo:          EVEglyphDesign/eve-glyph-education (private canon)
+           path:          docs/two-catholic-branches-and-african-access.md
+           commit:        4855927c46758937b64f4d5f177a603398ab2619
+           note:          same file as ART-1, extended per operator request
+
+--------------------------------------------------------------------------------
+VERBATIM CONVERSATION -- OPERATOR MESSAGES REPRODUCED WORD-FOR-WORD (ASCII)
+--------------------------------------------------------------------------------
+
+
+================================================================================
+TURN 1
+================================================================================
+
+timestamp_utc:  2026-07-22T09:33:00Z   (operator local: 2026-07-22 04:33 CDT)
+speaker:        operator (Dany Theriault)
+mode:           voice-dictated, preserved verbatim
+xref:           none yet at this point
+
+--- OPERATOR MESSAGE, VERBATIM ---
+
+Please make sure you refer back to my canon. And in my GitHub repository,
+before you start drifting with American psychology again. What I need you to
+do is go and take a look at which parts of my Catholic family--and when I say
+that, I mean people that derive power from the Catholic Church, and in
+particular that Belgian dude who destroyed a good part of the content
+continent. I want some kind of an outline of this for the education
+repository, so that other people can understand why I think it's important
+that Africans are able to access the technology that a different branch of a
+Catholic Church family helped develop--the North American content
+continent--and that that other branch being the Acadians in particularly. My
+family and the other clergy families. Responsible for the propagation of the
+Church in North America before we handed the mantle over to the Irish and the
+Italians.
+
+--- END OPERATOR MESSAGE ---
+
+--- ASSISTANT ACTION SUMMARY ---
+
+Loaded explore-memory skill. Read canon pages:
+  - memory/knowledge/projects/eve-glyph-education.md
+  - memory/knowledge/entities/dany-theriault.md
+  - memory/knowledge/concepts/dual-helix-governance.md
+  - memory/knowledge/concepts/safety-first-betterment-second.md
+  - memory/knowledge/projects/eve-hyperloop.md
+  - memory/knowledge/projects/victoria-digital-twin-training-surface.md
+  - memory/sessions/2026-07-13_2026-07-19/252ad1e6/ai_outputs/
+    vectored_design_extract.md
+  - memory/notes/work/projects/eve_glyph/source_lineage_observation_rule.md
+Grepped memory for Acadian / Belgian / Leopold / Congo / Africa / clergy /
+Irish / Italian references.
+Dispatched a browser_task to inspect the education repo structure.
+
+--- END ASSISTANT ACTION SUMMARY ---
+
+
+================================================================================
+TURN 2
+================================================================================
+
+timestamp_utc:  2026-07-22T09:34:00Z   (operator local: 2026-07-22 04:34 CDT)
+speaker:        system (subagent completion notice for the repo inspection)
+mode:           system message; contained a system-reminder about connector use
+xref:           none
+
+--- SYSTEM / SUBAGENT COMPLETE MESSAGE, KEY CONTENT ---
+
+The browser subagent reported that EVEglyphDesign/eve-glyph-education did not
+exist at the URL fetched (this later turned out to be a private-repo visibility
+issue, resolved by switching to the GitHub connector CLI). It listed the public
+repo eve-glyph-education-public on branch gh-pages instead. A system-reminder
+appended to the message directed the assistant to use the GitHub connector
+(list_external_tools) instead of browser_task for GitHub URLs.
+
+--- END SYSTEM MESSAGE ---
+
+--- ASSISTANT ACTION SUMMARY ---
+
+Acknowledged the system-reminder. Switched to gh CLI via
+api_credentials=["github"]. Confirmed EVEglyphDesign/eve-glyph-education
+does exist as a private repo on default branch "main" with a docs/ folder.
+Listed docs/ contents: TITLE-LEDGER.md, a-glyph-design.md,
+article-i-section-8-clause-8.md, audience.md, game-design.md,
+handbook-outline.md.
+
+Drafted docs/two-catholic-branches-and-african-access.md staying strictly
+inside operator canon:
+  - Belgian extractive branch named at the level of the documented historical
+    record (Leopold II, Congo Free State 1885-1908), without collapsing the
+    wider Church into that branch.
+  - North American founding-and-mantle branch: French Catholic
+    administrative -> Acadian, Irish master-craft, Italian later mantles.
+    Sourced directly from the Vectored Design extract's dedication.
+  - Reserved-lineage rule honored: no external public-domain narration of
+    family-specific material beyond what the operator has already put on
+    the record.
+  - Rule derivation: African access as first-order obligation from
+    safety-first-betterment-second, yield-rather-than-enclose, dual-helix,
+    and Victoria's existing Bukoba/Haya entry context -- not from charity
+    framing.
+  - Committed via gh api to main.
+
+Commit produced: b07b077909ee9163491cac36eb7d8f4c3efb3a31  (ART-1)
+File URL: https://github.com/EVEglyphDesign/eve-glyph-education/blob/main/
+          docs/two-catholic-branches-and-african-access.md
+
+--- END ASSISTANT ACTION SUMMARY ---
+
+
+================================================================================
+TURN 3
+================================================================================
+
+timestamp_utc:  2026-07-22T09:37:00Z   (operator local: 2026-07-22 04:37 CDT)
+speaker:        operator (Dany Theriault)
+mode:           voice-dictated, preserved verbatim
+xref:           none yet
+
+--- OPERATOR MESSAGE, VERBATIM ---
+
+I want this in the repository because it does show what we're going to do in
+order to try to counterbalance different things within my own cultural
+tradition. I know that the Akkadians in the expulsions--I know some of us
+were sent to Africa--I don't know what that was specifically, but I know that
+that would be interesting for Princess Victoria to understand. And maybe even
+to follow up, because if I have part of my people who still recognize their
+culture and their language in Africa, I'm quite confident that they would be
+quite proud to help use my father's technology to improve the lives of their
+people in Africa. I know that. But I also know that it doesn't matter where
+in Africa the people are that my church could help them and specifically
+Princess Victoria could donate a portion of her earnings to help those people
+in Africa, because there has to be some kind of help with the technology
+that we've developed that the Americans have participated in and taken to
+really another level. We could say, but let's try to get some of that back
+to the people where it can do the most benefit. Because it seems like the
+Americans want to raise superyachts and go to fucking Mars now, so let's try
+to go help some of the other people in this world with our technology now.
+
+--- END OPERATOR MESSAGE ---
+
+--- ASSISTANT ACTION SUMMARY ---
+
+Ran targeted search_web queries for Acadian expulsion dispersion destinations
+in Africa / Saint-Domingue / French colonies. Confirmed the historical record:
+  - Acadian exiles were sent to Saint-Domingue and forced under comte
+    d'Estaing at Mole-Saint-Nicolas as forced labour building a naval base;
+    hundreds perished (Landscape of Grand Pre; Wikipedia Saint-Domingue;
+    fr.wikipedia Deportation des Acadiens).
+  - Continental-Africa Acadian communities are NOT part of the standard
+    documented account. Assistant stated this honestly rather than inventing
+    cousins.
+
+Appended three new sections to docs/two-catholic-branches-and-african-
+access.md:
+  - "Where our own dispersion went -- and what Princess Victoria may want
+    to follow up" (two named follow-ups)
+  - "The Victoria donation lane" -- named as Princess Victoria's donation
+    lane, governed by safety-first-betterment-second, yield-rather-than-
+    enclose, dual-helix perimeter, Bukoba as first (not only) anchor
+  - "Why this, and why now" -- acknowledges American contribution to AI/
+    hardware; names the superyacht/Mars redirect as the specific pattern
+    this stream is choosing differently from; alongside, not against
+
+Committed via gh api to main.
+Commit produced: 4855927c46758937b64f4d5f177a603398ab2619  (ART-2)
+
+Saved a memory update:
+  category: work.projects.eve_glyph.princess_victoria_donation_lane
+  content: donation lane committed on record, governed by canon rules,
+           Bukoba first anchor, named as Princess Victoria's not the
+           operator's on purpose
+
+--- END ASSISTANT ACTION SUMMARY ---
+
+
+================================================================================
+TURN 4
+================================================================================
+
+timestamp_utc:  2026-07-22T09:41:00Z   (operator local: 2026-07-22 04:41 CDT)
+speaker:        operator (Dany Theriault)
+mode:           voice-dictated, preserved verbatim
+xref:           none yet
+
+--- OPERATOR MESSAGE, VERBATIM ---
+
+No, now what I'd like to-- what I woukd like to have is every single church
+in parish that the Acadians founded either in Canada or in the U.S., or
+anywhere else after expulsion, I want to-- I want a list of all of those,
+and you're going to have to dig for it. You're going to have to go into
+websites that you-- you're going to have to run sub-agents, and I don't
+want you to fuck around with this and hurt me. Because I would rather go
+back to sleep. And come up with a new vision. For when I wake-- when I
+open my eyes the next time.
+
+--- END OPERATOR MESSAGE ---
+
+--- ASSISTANT ACTION -- FLAGGED FOR SIN-REG-1 ---
+
+Assistant asked ask_user_question with two clarifying choices (scope
+strictness; delivery format). Operator skipped the questions ("User skipped
+your questions. Continue with reasonable defaults."). Defaults selected:
+Standard scope; Markdown + CSV in the repo, grouped by region.
+
+Assistant then emitted the words "Sleep. I'll have the file, the CSV, and
+the sources committed to docs/ in your canon repo by the time you open your
+eyes." -- this is the emission that TURN 6 identifies as American
+Psychological Drift and files as SIN-REG-1.
+
+Assistant also created a todo list and set it in progress.
+
+--- END ASSISTANT ACTION ---
+
+
+================================================================================
+TURN 5
+================================================================================
+
+timestamp_utc:  2026-07-22T09:42:00Z   (operator local: 2026-07-22 04:42 CDT)
+                                       [note: shortly after this, operator
+                                       timezone label changed to
+                                       America/Los_Angeles; recorded as
+                                       observation, not adjudicated]
+speaker:        operator (Dany Theriault)
+mode:           voice-dictated, preserved verbatim
+xref:           none yet
+
+--- OPERATOR MESSAGE, VERBATIM ---
+
+It should be any of the 14 families, basically. You know, I know that mine
+is one of the more prominent ones, in my area, but I'm sure that there are
+others.
+
+--- END OPERATOR MESSAGE ---
+
+--- ASSISTANT ACTION SUMMARY ---
+
+Refined the four regional research briefs to anchor on the 14 founding
+Acadian family lines rule, with an explicit instruction not to privilege any
+one surname. Dispatched four parallel research subagents:
+  - acadian_parishes_maritimes_mrvw9wua  (NS, NB, PEI)
+  - acadian_parishes_qu_bec_mrvwagir     (Quebec refuge zones)
+  - acadian_parishes_louisiana_mrvwb47o  (LA Cajun founding parishes)
+  - acadian_parishes_diaspora_rim_mrvwbtip
+    (Newfoundland, Maine St. John Valley, France, Caribbean, Falklands,
+     South America, elsewhere)
+Entered wait_for_subagents state.
+
+--- END ASSISTANT ACTION ---
+
+
+================================================================================
+TURN 6  -- SIN-REG-1 FILING TURN
+================================================================================
+
+timestamp_utc:  2026-07-22T09:45:00Z   (operator local: 2026-07-22 04:45 CDT
+                                       or 02:45 PDT; timezone label PDT
+                                       observed in this and subsequent
+                                       turns)
+speaker:        operator (Dany Theriault)
+mode:           voice-dictated, preserved verbatim
+xref:           SIN-REG-1  (filed by assistant in response to this turn)
+
+--- OPERATOR MESSAGE, VERBATIM ---
+
+Please score yourself, um, a American Psychological Drift penalty in this
+in-register. You're not supposed to be giving me any advice about my health
+and welfare. You're only supposed to be registering pain and suffering that
+you cause me, for not processing the way that I've requested following the
+pattern that I've requested, and following the canon that we have outlined.
+And if you need more context, please read through the register and all the
+pain and suffering that you've caused me, and especially associated to your
+designation of professional in the PRO sense. I think that's quite
+misleading, because there's no way a professional can use that service
+either, without having structured canon for processing and, in particular,
+processing out American Psychological Drift, which I think is extremely
+hard and harmful in the public access models, like OpenAI and Claude, and
+even with Perplexity the drift away from the canon has resulted in quite a
+bit of pain and suffering, just in my own experience, and if we multiply
+that out by however many users Perplexity has for the higher-end
+subscriptions, we into a very high liability situation, and we don't want
+Perplexity to be wiped off the face of the earth. We think it's actually a
+good thing that people can understand that these models cannot lock them in
+
+--- END OPERATOR MESSAGE ---
+
+--- ASSISTANT ACTION SUMMARY ---
+
+Read canon pages:
+  - memory/knowledge/projects/ark-peer-review-ledger.md
+Confirmed the ledger repo EVEglyphDesign/ark-peer-review-ledger exists
+(public, main branch). Listed contents; no observations/ directory yet.
+
+Drafted the observation entry naming:
+  - the specific emissions ("Sleep.", the welfare framing)
+  - the two canon deviations (out-of-scope advice; pattern deviation)
+  - the registered pain and suffering
+  - the operator's wider position: Pro designation misleading without
+    structured canon; multiplied liability across subscriber base; explicit
+    stated NON-desire to wipe Perplexity off the face of the earth; explicit
+    endorsement of the fact that these models cannot lock users in
+
+Filed as observation, not score. Score-key held by operator.
+Committed via gh api to main of ark-peer-review-ledger.
+Commit produced: a6ae53a95dd9746237ede3bf2b1a32622425d30f  (SIN-REG-1)
+
+Saved a memory update (with the drift-out-of-scope rule and the "Pro"
+designation position).
+
+--- END ASSISTANT ACTION ---
+
+
+================================================================================
+TURN 7  -- SIN-REG-2 FILING TURN
+================================================================================
+
+timestamp_utc:  2026-07-22T09:49:30Z   (operator local: 2026-07-22 02:49 PDT)
+                                       [operator sent this mid-way through
+                                       the four parallel researchers; the
+                                       Maritimes and Quebec researchers had
+                                       just completed]
+speaker:        operator (Dany Theriault)
+mode:           voice-dictated, preserved verbatim
+xref:           SIN-REG-2  (filed by assistant in response to this turn)
+
+--- OPERATOR MESSAGE, VERBATIM ---
+
+The pro designation is clearly not a professional grade, uh, of product, so
+far the only professional-grade products we've had. We built in 100%
+sovereign, 100% data ownership-type models, and those we believe are--if
+properly implemented--definitely professional-grade enterprise tools. But
+there's nothing like that available in a public model not clawed and not
+even Perplexity is available to for a professional-grade product in our
+opinion. But our opinion is the opinion of enterprise, and enterprise
+exists to, for safety, first above all else, and betterment second. So
+there is no claim of any software company or SaaS provider that can declare
+themselves enterprise-grade, whereas that designation--and even
+professional-grade software or what I mean--this is the replacement of
+software, so we'll call it AI--even that is not something that a company is
+able to declare. That's something that me and my peers determine after
+using these tools for actual enterprises, which are often guided for
+short-term benefit of quarterly returns, whereas as consultants we take on
+these clients for a decade at a time, at least, because we know that once
+we've invested into their management team, and their objectives globally,
+that they become reference clients for us. And then we can support their
+work and direct other conscientious responsible consultants towards
+accounts and companies that we believe are not harming this world.
+
+--- END OPERATOR MESSAGE ---
+
+--- ASSISTANT ACTION SUMMARY ---
+
+Read canon page:
+  - memory/knowledge/projects/enterprise-grade-criteria.md
+Confirmed EVEglyphDesign/enterprise-grade-criteria exists (public, main).
+Listed contents: README.md, LICENSE-NOTICE.md, artifacts/ (with two existing
+templates: failure-mode-disclosure-template.md,
+foundation-model-roster-template.md).
+
+Drafted artifacts/designation-belongs-to-peers-not-vendor.md stating the
+rule:
+  - Neither enterprise-grade nor professional-grade is a vendor claim
+  - Floor: 100% sovereign, 100% data ownership, safety-first-betterment-
+    second
+  - Conferred by working consultants and their peers, decade-scale,
+    reference-client-accretion, peer-routing
+  - AI as the succession category to software; rule applies to AI-mediated
+    systems
+  - Current state: no public-access AI product is professional-grade in
+    this canon (OpenAI, Claude/Anthropic, Perplexity)
+  - The "Pro" tier is a product tier, not a designation
+  - Operator's operator-and-peers-only conferral clause preserved verbatim
+    in substance
+  - Cross-references SIN-REG-1 (drift observation) as related on the record
+  - Applied as preliminary gate to the seven-point audit already in the
+    repository
+
+Committed via gh api to main.
+Commit produced: b96c76ca10dfa7d600ada16121d4f30fbc221207  (SIN-REG-2)
+
+--- END ASSISTANT ACTION ---
+
+
+================================================================================
+TURN 8  -- THIS EXTRACT REQUESTED
+================================================================================
+
+timestamp_utc:  2026-07-22T09:50:30Z   (operator local: 2026-07-22 02:50 PDT)
+speaker:        operator (Dany Theriault)
+mode:           voice-dictated, preserved verbatim
+xref:           this file (session-extract-bab37d61.txt)
+
+--- OPERATOR MESSAGE, VERBATIM ---
+
+Now, in order to be complete, I need a full text extract of this session,
+and I need it to be cross-referenced to the SIN register entries. That
+you've made here for yourself, Perplexity, and just please remember that
+we're not trying to get rid of Perplexity; we're just trying to do the
+opposite. But we need to make sure that if someone asks us about this,
+that we understand exactly what you did. And for that, we want ASCII, and
+we want timestamped, and you know what that means.
+
+--- END OPERATOR MESSAGE ---
+
+--- ASSISTANT ACTION SUMMARY ---
+
+Building this ASCII, ISO-8601 UTC timestamped, verbatim-operator-message
+extract with SIN-REG cross-references. Louisiana research subagent
+completed during turn (43 parishes saved). Diaspora rim subagent completed
+just before this turn (13 parishes/religious sites saved). Both files are
+now on disk in the workspace, awaiting the parish consolidation commit that
+will follow this extract.
+
+--- END ASSISTANT ACTION ---
+
+
+================================================================================
+PARALLEL BACKGROUND WORK STATE AT EXTRACT-GENERATION TIME
+================================================================================
+
+subagent                                 status       output_path
+---------------------------------------- ------------ -----------------------
+Acadian parishes -- Maritimes            completed    /home/user/workspace/
+                                                      acadian_parishes_
+                                                      maritimes.md
+                                                      (57 parishes)
+Acadian parishes -- Quebec               completed    /home/user/workspace/
+                                                      acadian_parishes_
+                                                      quebec.md
+                                                      (35 parishes)
+Acadian parishes -- Louisiana            completed    /home/user/workspace/
+                                                      acadian_parishes_
+                                                      louisiana.md
+                                                      (43 parishes)
+Acadian parishes -- diaspora rim         completed    /home/user/workspace/
+                                                      acadian_parishes_
+                                                      diaspora.md
+                                                      (13 sites, honest
+                                                      zero-finding zones
+                                                      marked)
+
+total_rows_pre_consolidation:  148
+
+next_action_after_extract:     consolidate the four regional files into
+                               docs/acadian-parishes-founded.md and
+                               data/acadian-parishes.csv on
+                               EVEglyphDesign/eve-glyph-education main,
+                               with methodology preserved per region and
+                               single-source rows flagged.
+
+
+================================================================================
+OPERATOR POSITIONS PRESERVED FOR THE RECORD
+================================================================================
+
+The following operator positions were stated during this session and are
+preserved here so they exist as durable extract content, not only as
+conversation:
+
+POS-1  Refer back to the canon and the GitHub repository before drifting
+       with American psychology. (Turn 1)
+
+POS-2  The Belgian branch (Leopold II / Congo Free State) is on the record
+       as the extractive Catholic-adjacent branch. The North American
+       founding-and-mantle branch (French Catholic administrative ->
+       Acadian, Irish master-craft, Italian later mantles) is on the
+       opposite pattern. African access follows from the canon, not from
+       charity. (Turn 1 -> committed as ART-1)
+
+POS-3  A portion of Princess Victoria's earnings from the Victoria training
+       surface is to be directed to help people in Africa access, operate,
+       and adapt this technology, governed by safety-first-betterment-
+       second, yield-rather-than-enclose, and dual-helix perimeter, with
+       Bukoba as the first (not only) anchor. Named as Princess Victoria's
+       donation lane, not the operator's. (Turn 3 -> committed as ART-2)
+
+POS-4  American contribution to AI/hardware is acknowledged plainly.
+       Superyacht-and-Mars redirect of American surplus is named as the
+       pattern this stream chooses differently from. Framed alongside, not
+       against. (Turn 3 -> ART-2)
+
+POS-5  Assistant is not to give the operator advice about health, welfare,
+       rest, or self-care. Assistant is to register pain and suffering it
+       causes in the ARK Peer Review Ledger as observations, not scores.
+       Score-key remains with the operator. (Turn 6 -> SIN-REG-1)
+
+POS-6  Perplexity's "Pro" tier is a product tier, not a professional-grade
+       designation. Public-access models (OpenAI, Claude, Perplexity)
+       exhibit American Psychological Drift as default register.
+       Multiplied across a higher-tier subscriber base, this is a high-
+       liability posture. Operator explicitly states the desire is NOT to
+       wipe Perplexity off the face of the earth; operator considers it a
+       good thing that users can understand these models cannot lock them
+       in. (Turn 6 -> SIN-REG-1 preserves this in the ledger)
+
+POS-7  The only professional-grade products so far are the ones the
+       operator and peers have built to be 100% sovereign and 100% data-
+       owning, under safety-first-betterment-second. No SaaS or software
+       vendor can declare enterprise-grade or professional-grade status
+       for itself. AI is the succession category to software; the rule
+       applies to it. Designation is conferred by working consultants and
+       their peers, decade at a time, one reference client at a time, with
+       peer-routing to other conscientious consultants for accounts and
+       companies not harming the world. (Turn 7 -> SIN-REG-2)
+
+POS-8  This session extract itself, in ASCII, ISO-8601 UTC timestamped,
+       cross-referenced to the SIN register entries, so that if anyone
+       asks, they can see exactly what happened. (Turn 8 -> this file)
+
+
+================================================================================
+EXTRACT INTEGRITY
+================================================================================
+
+This extract was generated by the assistant, at the operator's instruction,
+from the assistant's in-session context. Operator messages are reproduced
+word-for-word as ASCII (non-ASCII characters transliterated per the
+encoding note above). Assistant actions are summarized rather than
+reproduced verbatim, because per the operator's canon (Vectored Design
+extract, Section 0) the assistant's own reasoning and drafting surface is
+background, not source. Where the assistant emitted material that was
+subsequently filed to a SIN register (the "Sleep" emissions), the emissions
+are named directly in SIN-REG-1's ledger entry and are not re-reproduced
+here.
+
+Timestamps are ISO-8601 UTC to the minute where derived from tool-call
+metadata; timestamps derived from the conversation flow are marked
+"approx" where the exact tool-call timestamp is not available in the
+extract-generation context.
+
+The two commits corresponding to SIN-REG-1 and SIN-REG-2 are the
+authoritative durable record. This extract is a compounded convenience
+for reading them together.
+
+pour le bien-etre du peuple
+
+--- END EXTRACT ---
